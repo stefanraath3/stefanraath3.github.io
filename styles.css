@@ -2,12 +2,13 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #131313;  /* Blackhole dark */
+  background-color: #040507;  /* Blackhole dark */
   color: #FFFFFF;
   font-family: 'Asul', sans-serif;
   font-family: 'Bebas Neue', sans-serif;
   font-family: 'Kurale', serif;
   font-family: 'PT Serif', serif;
+  cursor: url('./img/circle-resized.png') 64 64, auto;
 }
 
 /* Nav Bar */
@@ -58,6 +59,11 @@ body {
 #navbar a {
   text-decoration: none;
   color: #FFFFFF;
+  cursor: url('./img/black-circle.png') 64 64, auto;
+}
+
+#navbar a:hover {
+  text-decoration: underline;
 }
 
 /* Hero Section */
@@ -159,7 +165,7 @@ body {
     background-position: 0% 0;
     color: white;
     padding: 0.2em;
-    animation: highlight 2s ease-in-out 1 forwards;
+    animation: highlight 3s ease-in-out 2 forwards;
 }
 
 @keyframes highlight {
@@ -172,9 +178,9 @@ body {
 .hero-right button {
   font-size: 1.4rem;
   color: #FFFFFF;
+  cursor: url('./img/black-circle.png') 64 64, auto;
   padding: 0.4rem 1rem; /* Increase horizontal padding */
   border: 2px solid white;
-  cursor: pointer;
   margin-top: 1rem;
   border-radius: 50px; /* High value for pill shape */
   background-color: rgba(255, 255, 255, 0); /* Semi-transparent white background */
@@ -187,28 +193,70 @@ body {
 }
 
 /* About Section */
+
 #about {
-  display: block;
-  align-items: center; /* Vertically center the text and the image */
-  margin-left: 2rem;
-  height: 50vh;
-} 
-
-#about img {
-  max-width: 50%; /* Adjust as needed */
-  margin-left: 2rem; /* Add space between the text and the image */
+  height: 80vh;
 }
 
-#about h1 {
+.about-content {
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  margin-left: 3rem;
+  height: 100%;
+}
+
+.text-content {
+  /* Adjust width as needed */
+  width: 50%;
   text-transform: uppercase;
-  font-size: 3rem;
+  margin: auto;
 }
 
-#about p {
+.text-content h1 {
+  font-size: 4rem;
+  margin-bottom: 0;
+}
+
+
+.text-content p {
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.6rem;
+}
+
+.about-content img {
+  /* Adjust width as needed */
+  max-width: 35%;
+  max-height: 40vh;
+  margin: auto;
+}
+
+#skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.skills-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 20px;
+  justify-items: center;
+  text-align: center;
   text-transform: uppercase;
 }
 
+.skills-content h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.grid-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 /* Footer */
 footer {
   background-color: #131313;
