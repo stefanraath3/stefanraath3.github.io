@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #000000;  /* Blackhole dark */
+  background-color: #131313;  /* Blackhole dark */
   color: #FFFFFF;
   font-family: 'Asul', sans-serif;
   font-family: 'Bebas Neue', sans-serif;
@@ -96,10 +96,39 @@ body {
   font-size: 6.7em;  /* Very large font */
 }
 
-.hero-left .engineer {
-  margin-top: -1.4rem;
+.creative-designer {
+  position: relative;
 }
 
+#hero .creative {
+  position: absolute;
+  color: pink;
+  font-size: 1.9rem; /* Adjust size as needed */ 
+  top: 0; /* Adjust position as needed */
+  left: 0.5rem; /* Adjust position as needed */
+  width: 100%;
+  text-align: left;
+  background: linear-gradient(45deg, #40E0D0, #FF00FF);
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-size: 500% 500%;
+  -webkit-text-fill-color: transparent;
+  animation: gradient 5s ease-in-out infinite;
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.hero-left .engineer {
+  margin-top: -3rem;
+}
+
+.hero-left .designer {
+  margin-top: 0.35rem;
+}
 .hero-left .ampersand {
   font-size: 3rem;
 
@@ -123,10 +152,27 @@ body {
   max-width: 100%;
 }
 
+.hero-right .impossible-myth {
+    background: linear-gradient(90deg, transparent, lightblue);
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    background-position: 0% 0;
+    color: white;
+    padding: 0.2em;
+    animation: highlight 2s ease-in-out 1 forwards;
+}
+
+@keyframes highlight {
+    0% { background-size: 0% 100%; }
+    100% { background-size: 100% 100%; }
+}
+
+
+
 .hero-right button {
-  font-size: 1rem;
+  font-size: 1.4rem;
   color: #FFFFFF;
-  padding: 1rem 2rem; /* Increase horizontal padding */
+  padding: 0.4rem 1rem; /* Increase horizontal padding */
   border: 2px solid white;
   cursor: pointer;
   margin-top: 1rem;
@@ -140,43 +186,34 @@ body {
   background-color: rgba(255, 255, 255, 0.312); /* Slightly less transparent on hover */
 }
 
-/* Skills Section */
-#skills {
-  padding: 2rem;
-  font-size: 1.2em;  /* Adjusted to match new aesthetic */
-}
-
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
-}
-
-/* Projects Section */
-#projects {
-  padding: 2rem;
-  font-size: 1.2em;  /* Adjusted to match new aesthetic */
-}
-
-/* Contact Section */
-#contact {
-  padding: 2rem;
-  font-size: 1.2em;  /* Adjusted to match new aesthetic */
-}
-
-#contact-form input,
-#contact-form textarea,
-#contact-form button {
+/* About Section */
+#about {
   display: block;
-  margin-bottom: 1rem;
-  padding: 0.5rem;
-  width: 100%;
+  align-items: center; /* Vertically center the text and the image */
+  margin-left: 2rem;
+  height: 50vh;
+} 
+
+#about img {
+  max-width: 50%; /* Adjust as needed */
+  margin-left: 2rem; /* Add space between the text and the image */
+}
+
+#about h1 {
+  text-transform: uppercase;
+  font-size: 3rem;
+}
+
+#about p {
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
 }
 
 /* Footer */
 footer {
-  background-color: #000000;
+  background-color: #131313;
   padding: 1rem;
   text-align: center;
   font-size: 1.2em;  /* Adjusted to match new aesthetic */
 }
+
