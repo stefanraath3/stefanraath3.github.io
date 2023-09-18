@@ -4,6 +4,10 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: #000000;  /* Blackhole dark */
   color: #FFFFFF;
+  font-family: 'Asul', sans-serif;
+  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Kurale', serif;
+  font-family: 'PT Serif', serif;
 }
 
 /* Nav Bar */
@@ -31,6 +35,10 @@ body {
 
 .navbar-left span {
   margin-right: 1rem;
+  font-family: 'Asul', sans-serif;
+  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Kurale', serif;
+  font-family: 'PT Serif', serif;
 }
 
 .navbar-right {
@@ -72,9 +80,34 @@ body {
   flex-wrap: nowrap;
 }
 
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hero-left div {
+  display: flex;  
+  align-items: flex-end;
+}
+
 .hero-left span {
   display: block;
-  font-size: 5em;  /* Very large font */
+  font-size: 6.7em;  /* Very large font */
+}
+
+.hero-left .engineer {
+  margin-top: -1.4rem;
+}
+
+.hero-left .ampersand {
+  font-size: 3rem;
+
+}
+
+.ampersand {
+  align-self: flex-end;
+  margin-bottom: 1.2rem; /* Adjust as needed */
 }
 
 .hero-right {
@@ -91,12 +124,20 @@ body {
 }
 
 .hero-right button {
-  padding: 1rem;
-  background-color: #FFFFFF;
-  border: none;
+  font-size: 1rem;
+  color: #FFFFFF;
+  padding: 1rem 2rem; /* Increase horizontal padding */
+  border: 2px solid white;
   cursor: pointer;
   margin-top: 1rem;
+  border-radius: 50px; /* High value for pill shape */
+  background-color: rgba(255, 255, 255, 0); /* Semi-transparent white background */
+  backdrop-filter: blur(5px); /* Blurry background */
+  transition: 0.3s; /* Smooth transition for hover effect */
+}
 
+.hero-right button:hover {
+  background-color: rgba(255, 255, 255, 0.312); /* Slightly less transparent on hover */
 }
 
 /* Skills Section */
