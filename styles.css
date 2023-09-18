@@ -42,7 +42,20 @@ body {
 }
 
 .hero-content {
-  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.hero-left h1, .hero-left .role {
+  font-size: 1.8em;  /* Increased size by 80% */
+}
+
+.hero-right {
+  max-width: 50%;
+  text-align: right;
 }
 
 /* Skills Section */
@@ -58,6 +71,11 @@ body {
 
 .skill-card {
   text-align: center;
+}
+
+.skill-card img {
+  width: 10rem;
+  height: 10rem;
 }
 
 /* Projects Section */
