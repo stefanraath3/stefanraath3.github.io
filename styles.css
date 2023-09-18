@@ -80,6 +80,7 @@ body {
 .hero-right {
   text-align: right;
   width: auto;
+  max-width: 600px;
   margin-left: auto;
 }
 
