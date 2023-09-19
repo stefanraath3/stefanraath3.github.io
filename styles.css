@@ -307,9 +307,19 @@ body {
 .about-content img {
   /* Adjust width as needed */
   max-width: 35%;
-  max-height: 40vh;
+  max-height: 45vh;
   margin: auto;
 }
+
+#skills {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 30vh;
+  width: 100vw; /* Full viewport width */
+}
+
 
 /* Footer */
 footer {

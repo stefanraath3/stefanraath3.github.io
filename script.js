@@ -32,20 +32,4 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
-// Contact Form Submission
-document.addEventListener('DOMContentLoaded', function() {
-  const contactForm = document.getElementById('contact-form');
-
-  contactForm.addEventListener('submit', function(e) {
-      e.preventDefault();
-      const formData = new FormData(this);
-      let formObject = {};
-      
-      formData.forEach((value, key) => {
-          formObject[key] = value;
-      });
-      
-      console.log('Form Data Submitted:', formObject);
-  });
-});
 
