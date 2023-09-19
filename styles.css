@@ -329,15 +329,27 @@ body {
 
 .image-strip {
   display: flex;
-  animation: scroll 10s linear infinite; /* Adjust time as needed */
+  height: 30vh;
+  animation: scroll 10s linear infinite; /*Adjust time as needed */
+} 
+
+.image-strip .html-logo{
+  width: auto;
+  height: auto;
 }
+
+.image-strip .css-logo {
+  width: auto;
+  height: auto;
+}
+
 
 @keyframes scroll {
   0% {
     transform: translateX(100%);
   }
   100% {
-    transform: translateX(-70%);
+    transform: translateX(-70%); /*change this if you want the animation to go on for longer before it resets*/
   }
 }
 
