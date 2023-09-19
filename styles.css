@@ -1,3 +1,63 @@
+@font-face {
+  font-family: 'Migra';
+  src: url('./fonts/Migra-Extrabold.woff2') format('woff2'),
+       url('./fonts/Migra-Extrabold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Migra Light';
+  src: url('./fonts/Migra-Extralight.woff2') format('woff2'),
+       url('./fonts/Migra-Extralight.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neue Montreal Bold';
+  src: url('./fonts/ppneuemontreal-bold.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neue Montreal Bold';
+  src: url('./fonts/ppneuemontreal-bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neue Montreal Medium';
+  src: url('./fonts/ppneuemontreal-medium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neue Montreal Medium';
+  src: url('./fonts/ppneuemontreal-medium.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neue Montreal Book';
+  src: url('./fonts/ppneuemontreal-book.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neue Montreal Book';
+  src: url('./fonts/ppneuemontreal-book.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -42,6 +102,12 @@ body {
   font-family: 'PT Serif', serif;
 }
 
+.navbar-left .nav-name {
+  margin-right: 1rem;
+  font-family: 'Migra Light', Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
 .navbar-right {
   list-style: none;
   display: flex;
@@ -59,11 +125,17 @@ body {
 #navbar a {
   text-decoration: none;
   color: #FFFFFF;
-  cursor: url('./img/black-circle.png') 64 64, auto;
+  cursor: url('./img/black-circle-opacity.png') 64 64, auto;
 }
 
 #navbar a:hover {
-  text-decoration: underline;
+  background: linear-gradient(90deg, transparent, lightblue);
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  background-position: 0% 0;
+  color: white;
+  padding: 0.2em;
+  animation: highlight 1s ease-in-out forwards;
 }
 
 /* Hero Section */
@@ -83,11 +155,14 @@ body {
   width: 100vw;
   display: flex;
   justify-content: space-between;
+  position: relative;
+  bottom: 7rem;
   flex-wrap: nowrap;
 }
 
 .hero-left {
   display: flex;
+  font-family: 'Migra Light', Arial, Helvetica, sans-serif;
   flex-direction: column;
   align-items: flex-start;
 }
@@ -108,13 +183,14 @@ body {
 
 #hero .creative {
   position: absolute;
-  color: pink;
+  line-height: 2rem;
   font-size: 1.9rem; /* Adjust size as needed */ 
+  font-family: 'Migra' , Arial, Helvetica, sans-serif;
   top: 0; /* Adjust position as needed */
   left: 0.5rem; /* Adjust position as needed */
   width: 100%;
   text-align: left;
-  background: linear-gradient(45deg, #40E0D0, #FF00FF);
+  background: linear-gradient(45deg, black, #ff0086);
   -webkit-background-clip: text;
   background-clip: text;
   background-size: 500% 500%;
@@ -147,12 +223,15 @@ body {
 
 .hero-right {
   text-align: right;
+  position: relative;
+  top: 20pc;
   width: auto;
   max-width: 600px;
   margin-left: auto;
 }
 
 .hero-right p {
+  font-family: 'Neue Montreal Bold' , Arial, Helvetica, sans-serif;
   font-size: 2em;  /* Much bigger */
   text-transform: uppercase;
   max-width: 100%;
@@ -178,7 +257,7 @@ body {
 .hero-right button {
   font-size: 1.4rem;
   color: #FFFFFF;
-  cursor: url('./img/black-circle.png') 64 64, auto;
+  cursor: url('./img/black-circle-opacity.png') 64 64, auto;
   padding: 0.4rem 1rem; /* Increase horizontal padding */
   border: 2px solid white;
   margin-top: 1rem;
@@ -214,13 +293,14 @@ body {
 }
 
 .text-content h1 {
+  font-family: 'Migra', Arial, Helvetica, sans-serif;
   font-size: 4rem;
   margin-bottom: 0;
 }
 
 
 .text-content p {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Neue Montreal Medium', Arial, Helvetica, sans-serif;
   font-size: 1.6rem;
 }
 
@@ -231,32 +311,6 @@ body {
   margin: auto;
 }
 
-#skills {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-}
-
-.skills-content {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  grid-gap: 20px;
-  justify-items: center;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.skills-content h1 {
-  font-size: 4rem;
-  margin-bottom: 20px;
-}
-
-.grid-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 /* Footer */
 footer {
   background-color: #131313;
