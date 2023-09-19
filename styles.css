@@ -322,7 +322,7 @@ body {
 
 .image-strip-container {
   overflow: hidden; /* Hide images outside the container */
-  width: 50%;
+  width: 100%;
   position: relative;
   bottom: 3rem;
 }
@@ -337,7 +337,7 @@ body {
     transform: translateX(100%);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-70%);
   }
 }
 
