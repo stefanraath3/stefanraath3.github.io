@@ -330,18 +330,10 @@ body {
 .image-strip {
   display: flex;
   height: 30vh;
-  animation: scroll 10s linear infinite; /*Adjust time as needed */
+  animation: scroll 20s linear infinite; /*Adjust time as needed */
 } 
 
-.image-strip .html-logo{
-  width: auto;
-  height: auto;
-}
 
-.image-strip .css-logo {
-  width: auto;
-  height: auto;
-}
 
 
 @keyframes scroll {
@@ -349,7 +341,7 @@ body {
     transform: translateX(100%);
   }
   100% {
-    transform: translateX(-70%); /*change this if you want the animation to go on for longer before it resets*/
+    transform: translateX(-90%); /*change this if you want the animation to go on for longer before it resets*/
   }
 }
 
