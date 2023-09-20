@@ -330,20 +330,196 @@ body {
 .image-strip {
   display: flex;
   height: 30vh;
-  animation: scroll 20s linear infinite; /*Adjust time as needed */
+  animation: scroll 15s linear infinite; /*Adjust time as needed */
 } 
-
-
 
 
 @keyframes scroll {
   0% {
-    transform: translateX(100%);
+    transform: translateX(0);
   }
   100% {
-    transform: translateX(-90%); /*change this if you want the animation to go on for longer before it resets*/
+    transform: translateX(-150%); /*change this if you want the animation to go on for longer before it resets*/
   }
 }
+
+#works {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+.works-content {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(250px, 300px));
+  gap: 1rem;
+  justify-content: center;
+}
+
+@media (max-width: 900px) {
+  .works-content {
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .works-content {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.works-content h1 {
+  font-family: 'Migra';
+  font-size: 2.5rem;
+  height: auto;
+  grid-column: 1 / -1; /* To make the heading span all columns */
+  text-align: center;
+}
+
+.work-item {
+  text-align: center;
+  font-family: 'Neue Montreal', Arial, Helvetica, sans-serif;
+}
+
+.work-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20%;
+  transition: transform 0.3s ease-in-out;  /* Added transition for smooth scaling */
+}
+
+.work-item:hover img {
+  transform: scale(1.1);  /* Enlarge the image by 10% */
+}
+
+.work-item h3 {
+  font-size: 1.2rem;
+}
+
+.work-item p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.tags {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.tags span {
+  background-color: #171dcf;
+  margin: 0.2rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.2rem;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.links a {
+  cursor: url('./img/black-circle-opacity.png') 64 64, auto;
+  color: white;
+  padding: 0.5rem 1rem;
+  margin: 0.2rem;
+  border-radius: 0.2rem;
+  text-decoration: underline;
+  transition: background-color 0.3s ease;
+}
+
+.links a:hover {
+  background-color: #0056b3;
+
+}
+/* Contact Section */
+#contact {
+  background-color: #040507;
+  color: #FFFFFF;
+  padding: 2rem;
+  display: flex;
+  justify-content: flex-end; /* Aligns contact form to the right */
+}
+
+.connect-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.connect-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Migra', Arial, Helvetica, sans-serif;
+  font-size: 6em; /* Increased size of the header */
+}
+
+.connect-header p {
+  width: 50%; /* Decreased width of the paragraph */
+  justify-content: center;
+  text-align: center; /* Centered the paragraph text */
+}
+
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 2;
+}
+
+.contact-content h1 {
+  font-family: 'Migra', Arial, Helvetica, sans-serif;
+}
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 50%; /* Reduced width of the contact form */
+  margin: 0 auto; /* Centered the contact form */
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%; /* Ensures text areas are the same width as the button */
+  padding: 0.5rem;
+  border: none;
+  border-radius: 0.2rem;
+  font-family: 'Neue Montreal Bold', Arial, Helvetica, sans-serif;
+}
+
+/* Updated button style */
+.hero-button {
+  font-size: 1.4rem;
+  color: #FFFFFF;
+  cursor: url('./img/black-circle-opacity.png') 64 64, auto;
+  padding: 0.4rem 1rem;
+  border: 2px solid white;
+  margin-top: 1rem;
+  border-radius: 50px;
+  background-color: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(5px);
+  transition: 0.3s;
+}
+
+.hero-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: #FFFFFF;
+}
+
 
 /* Footer */
 footer {
