@@ -341,7 +341,7 @@ body {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-150%); /*change this if you want the animation to go on for longer before it resets*/
+    transform: translateX(-160%); /*change this if you want the animation to go on for longer before it resets*/
   }
 }
 
