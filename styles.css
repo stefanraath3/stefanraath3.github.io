@@ -62,6 +62,7 @@
 
 body {
   margin: 0;
+  overflow-x: hidden;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
   background-color: #040507;  /* Blackhole dark */
@@ -72,6 +73,12 @@ body {
   font-family: 'PT Serif', serif;
   cursor: url('./img/circle-resized.png') 64 64, auto;
 }
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 
 /* Nav Bar */
 #navbar {
@@ -527,7 +534,6 @@ body {
   border-color: #FFFFFF;
 }
 
-
 /* Footer */
 footer {
   background-color: #131313;
@@ -535,4 +541,97 @@ footer {
   text-align: center;
   font-size: 1.2em;  /* Adjusted to match new aesthetic */
 }
+@media (max-width: 768px) {
+  #navbar {
+      padding: 0.5rem;
+  }
+  #navbar .navbar-right li,
+  .navbar-left .nav-name,
+  .navbar-left span {
+      font-size: 0.7em;
+  }
+  #hero {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+  .hero-left span,
+  .hero-right p {
+      font-size: 1.5em;
+  }
+  #about {
+      padding-top: 2rem; /* Added padding to prevent overlap */
+      padding-bottom: 2rem; /* Added padding to prevent overlap */
+  }
+  .about-content {
+      flex-direction: column;
+      align-items: center;
+  }
+  .text-content p {
+      font-size: 1.2rem; /* Adjusted font size for better readability */
+      line-height: 1.6; /* Adjusted line height for better readability */
+  }
+  .about-content img {
+      max-width: 80%;
+  }
+  #skills {
+      height: 50vh;
+  }
+  .image-strip img {
+      max-width: 50%;
+  }
+  #works .work-item img {
+      border-radius: 10%;
+  }
+  #contact {
+      flex-direction: column;
+      align-items: center;
+  }
+  #contact-form {
+      width: 95%;
+  }
+  footer {
+      font-size: 0.8em;
+  }
+  .hero-left span,
+    .creative,
+    .designer,
+    .engineer {
+        font-size: 2em; /* Reduced font size for smaller screens */
+    }
+    .ampersand {
+        font-size: 1.5em; /* Adjusted font size for the ampersand */
+        margin-bottom: 0.5rem; /* Adjusted margin for better spacing */
+    }
+    .hero-left {
+        align-items: center; /* Center aligned the elements */
+        text-align: center; /* Centered the text */
+    }
+}
+
+@media (max-width: 480px) {
+  .hero-left span,
+  .hero-right p {
+      font-size: 1.2em;
+  }
+  .about-content img {
+      max-width: 100%;
+  }
+  .text-content p {
+      font-size: 1rem; /* Further reduced font size for very small screens */
+  }
+  .image-strip img {
+      max-width: 30%;
+  }
+  .hero-left span,
+  .creative,
+  .designer,
+  .engineer {
+      font-size: 1rem; /* Further reduced font size for very small screens */
+  }
+  .ampersand {
+      font-size: 1.2em; /* Further adjusted font size for the ampersand */
+  }
+}
+
 
